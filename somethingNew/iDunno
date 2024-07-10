@@ -1,0 +1,13 @@
+cd ~/Documents/somethingNew
+#git clone #repo name here
+#cd #rep from step two
+mkdir anExample
+cd anExample
+echo "Starting my Script $(date)!"
+echo "*DS_Store" > .gitignore
+touch iDunno.html
+touch iDunno.css
+touch iDunno.js
+mkdir css
+mv *.css css/
+tree 
