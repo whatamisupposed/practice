@@ -1,0 +1,205 @@
+[debug] [2024-10-18T02:29:03.706Z] ----------------------------------------------------------------------
+[debug] [2024-10-18T02:29:03.710Z] Command:       C:\Users\twyma\Codeprojects\angular\latest-greatest\node_modules\node\bin\node.exe C:\Users\twyma\AppData\Local\npm-cache\_npx\ba4f1959e38407b5\node_modules\firebase-tools\lib\bin\firebase.js init dataconnect
+[debug] [2024-10-18T02:29:03.711Z] CLI Version:   13.22.1
+[debug] [2024-10-18T02:29:03.711Z] Platform:      win32
+[debug] [2024-10-18T02:29:03.711Z] Node Version:  v22.10.0
+[debug] [2024-10-18T02:29:03.711Z] Time:          Thu Oct 17 2024 20:29:03 GMT-0600 (Mountain Daylight Time)
+[debug] [2024-10-18T02:29:03.711Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-10-18T02:29:03.727Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-10-18T02:29:03.728Z] > authorizing via signed-in user (twymanem@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\twyma\Codeprojects\angular\latest-greatest
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2024-10-18T02:29:49.471Z] Checked if tokens are valid: true, expires at: 1729221695119
+[debug] [2024-10-18T02:29:49.471Z] Checked if tokens are valid: true, expires at: 1729221695119
+[debug] [2024-10-18T02:29:49.475Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2024-10-18T02:29:49.475Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"pokemonAPI","name":"pokemonAPI"}
+[debug] [2024-10-18T02:29:49.806Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 400
+[debug] [2024-10-18T02:29:49.807Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"error":{"code":400,"message":"field [project_id] has issue [project_id contains invalid characters]","status":"INVALID_ARGUMENT","details":[{"@type":"type.googleapis.com/google.rpc.BadRequest","fieldViolations":[{"field":"project_id","description":"project_id contains invalid characters"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"url":"https://cloud.google.com/resource-manager/reference/rest/v1/projects"}]}]}}
+[debug] [2024-10-18T02:29:49.810Z] FirebaseError: HTTP Error: 400, field [project_id] has issue [project_id contains invalid characters]
+    at responseToError (C:\Users\twyma\AppData\Local\npm-cache\_npx\ba4f1959e38407b5\node_modules\firebase-tools\lib\responseToError.js:49:12)
+    at RetryOperation._fn (C:\Users\twyma\AppData\Local\npm-cache\_npx\ba4f1959e38407b5\node_modules\firebase-tools\lib\apiv2.js:312:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[error] 
+[error] Error: Failed to create project. See firebase-debug.log for more info.
+[debug] [2024-10-18T02:30:19.627Z] ----------------------------------------------------------------------
+[debug] [2024-10-18T02:30:19.631Z] Command:       C:\Users\twyma\Codeprojects\angular\latest-greatest\node_modules\node\bin\node.exe C:\Users\twyma\AppData\Local\npm-cache\_npx\ba4f1959e38407b5\node_modules\firebase-tools\lib\bin\firebase.js init dataconnect
+[debug] [2024-10-18T02:30:19.631Z] CLI Version:   13.22.1
+[debug] [2024-10-18T02:30:19.631Z] Platform:      win32
+[debug] [2024-10-18T02:30:19.631Z] Node Version:  v22.10.0
+[debug] [2024-10-18T02:30:19.632Z] Time:          Thu Oct 17 2024 20:30:19 GMT-0600 (Mountain Daylight Time)
+[debug] [2024-10-18T02:30:19.632Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-10-18T02:30:19.646Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-10-18T02:30:19.646Z] > authorizing via signed-in user (twymanem@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\twyma\Codeprojects\angular\latest-greatest
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2024-10-18T02:31:43.392Z] Checked if tokens are valid: true, expires at: 1729221695119
+[debug] [2024-10-18T02:31:43.392Z] Checked if tokens are valid: true, expires at: 1729221695119
+[debug] [2024-10-18T02:31:43.393Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2024-10-18T02:31:43.394Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"angular","name":"pokemonAPI"}
+[debug] [2024-10-18T02:31:43.693Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 409
+[debug] [2024-10-18T02:31:43.693Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"error":{"code":409,"message":"Requested entity already exists","status":"ALREADY_EXISTS"}}
+[debug] [2024-10-18T02:31:43.695Z] FirebaseError: HTTP Error: 409, Requested entity already exists
+    at responseToError (C:\Users\twyma\AppData\Local\npm-cache\_npx\ba4f1959e38407b5\node_modules\firebase-tools\lib\responseToError.js:49:12)
+    at RetryOperation._fn (C:\Users\twyma\AppData\Local\npm-cache\_npx\ba4f1959e38407b5\node_modules\firebase-tools\lib\apiv2.js:312:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[error] 
+[error] Error: Failed to create project because there is already a project with ID angular. Please try again with a unique project ID.
+[debug] [2024-10-18T02:32:18.213Z] ----------------------------------------------------------------------
+[debug] [2024-10-18T02:32:18.219Z] Command:       C:\Users\twyma\Codeprojects\angular\latest-greatest\node_modules\node\bin\node.exe C:\Users\twyma\AppData\Local\npm-cache\_npx\ba4f1959e38407b5\node_modules\firebase-tools\lib\bin\firebase.js init dataconnect
+[debug] [2024-10-18T02:32:18.220Z] CLI Version:   13.22.1
+[debug] [2024-10-18T02:32:18.220Z] Platform:      win32
+[debug] [2024-10-18T02:32:18.220Z] Node Version:  v22.10.0
+[debug] [2024-10-18T02:32:18.221Z] Time:          Thu Oct 17 2024 20:32:18 GMT-0600 (Mountain Daylight Time)
+[debug] [2024-10-18T02:32:18.221Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-10-18T02:32:18.242Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-10-18T02:32:18.242Z] > authorizing via signed-in user (twymanem@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\twyma\Codeprojects\angular\latest-greatest
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2024-10-18T02:33:44.516Z] Checked if tokens are valid: true, expires at: 1729221695119
+[debug] [2024-10-18T02:33:44.517Z] Checked if tokens are valid: true, expires at: 1729221695119
+[debug] [2024-10-18T02:33:44.518Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2024-10-18T02:33:44.518Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"firebasePokemon","name":"pokemonAPI"}
+[debug] [2024-10-18T02:33:44.775Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 400
+[debug] [2024-10-18T02:33:44.775Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"error":{"code":400,"message":"field [project_id] has issue [project_id contains invalid characters]","status":"INVALID_ARGUMENT","details":[{"@type":"type.googleapis.com/google.rpc.BadRequest","fieldViolations":[{"field":"project_id","description":"project_id contains invalid characters"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"url":"https://cloud.google.com/resource-manager/reference/rest/v1/projects"}]}]}}
+[debug] [2024-10-18T02:33:44.778Z] FirebaseError: HTTP Error: 400, field [project_id] has issue [project_id contains invalid characters]
+    at responseToError (C:\Users\twyma\AppData\Local\npm-cache\_npx\ba4f1959e38407b5\node_modules\firebase-tools\lib\responseToError.js:49:12)
+    at RetryOperation._fn (C:\Users\twyma\AppData\Local\npm-cache\_npx\ba4f1959e38407b5\node_modules\firebase-tools\lib\apiv2.js:312:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[error] 
+[error] Error: Failed to create project. See firebase-debug.log for more info.
+[debug] [2024-10-18T02:35:11.218Z] ----------------------------------------------------------------------
+[debug] [2024-10-18T02:35:11.227Z] Command:       C:\Users\twyma\Codeprojects\angular\latest-greatest\node_modules\node\bin\node.exe C:\Users\twyma\AppData\Local\npm-cache\_npx\ba4f1959e38407b5\node_modules\firebase-tools\lib\bin\firebase.js init dataconnect
+[debug] [2024-10-18T02:35:11.230Z] CLI Version:   13.22.1
+[debug] [2024-10-18T02:35:11.231Z] Platform:      win32
+[debug] [2024-10-18T02:35:11.231Z] Node Version:  v22.10.0
+[debug] [2024-10-18T02:35:11.232Z] Time:          Thu Oct 17 2024 20:35:11 GMT-0600 (Mountain Daylight Time)
+[debug] [2024-10-18T02:35:11.233Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-10-18T02:35:11.249Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-10-18T02:35:11.249Z] > authorizing via signed-in user (twymanem@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\twyma\Codeprojects\angular\latest-greatest
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2024-10-18T02:36:20.992Z] Checked if tokens are valid: true, expires at: 1729221695119
+[debug] [2024-10-18T02:36:20.993Z] Checked if tokens are valid: true, expires at: 1729221695119
+[debug] [2024-10-18T02:36:20.995Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2024-10-18T02:36:20.996Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"firebase","name":"firebase"}
+[debug] [2024-10-18T02:36:21.348Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 409
+[debug] [2024-10-18T02:36:21.349Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"error":{"code":409,"message":"Requested entity already exists","status":"ALREADY_EXISTS"}}
+[debug] [2024-10-18T02:36:21.353Z] FirebaseError: HTTP Error: 409, Requested entity already exists
+    at responseToError (C:\Users\twyma\AppData\Local\npm-cache\_npx\ba4f1959e38407b5\node_modules\firebase-tools\lib\responseToError.js:49:12)
+    at RetryOperation._fn (C:\Users\twyma\AppData\Local\npm-cache\_npx\ba4f1959e38407b5\node_modules\firebase-tools\lib\apiv2.js:312:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[error] 
+[error] Error: Failed to create project because there is already a project with ID firebase. Please try again with a unique project ID.
+[debug] [2024-10-18T02:36:42.385Z] ----------------------------------------------------------------------
+[debug] [2024-10-18T02:36:42.389Z] Command:       C:\Users\twyma\Codeprojects\angular\latest-greatest\node_modules\node\bin\node.exe C:\Users\twyma\AppData\Local\npm-cache\_npx\ba4f1959e38407b5\node_modules\firebase-tools\lib\bin\firebase.js init dataconnect
+[debug] [2024-10-18T02:36:42.389Z] CLI Version:   13.22.1
+[debug] [2024-10-18T02:36:42.390Z] Platform:      win32
+[debug] [2024-10-18T02:36:42.390Z] Node Version:  v22.10.0
+[debug] [2024-10-18T02:36:42.390Z] Time:          Thu Oct 17 2024 20:36:42 GMT-0600 (Mountain Daylight Time)
+[debug] [2024-10-18T02:36:42.390Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-10-18T02:36:42.405Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-10-18T02:36:42.406Z] > authorizing via signed-in user (twymanem@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\twyma\Codeprojects\angular\latest-greatest
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2024-10-18T02:37:15.019Z] Checked if tokens are valid: true, expires at: 1729221695119
+[debug] [2024-10-18T02:37:15.020Z] Checked if tokens are valid: true, expires at: 1729221695119
+[debug] [2024-10-18T02:37:15.021Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2024-10-18T02:37:15.022Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"pokemon","name":"pokemon"}
+[debug] [2024-10-18T02:37:15.322Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 409
+[debug] [2024-10-18T02:37:15.322Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"error":{"code":409,"message":"Requested entity already exists","status":"ALREADY_EXISTS"}}
+[debug] [2024-10-18T02:37:15.335Z] FirebaseError: HTTP Error: 409, Requested entity already exists
+    at responseToError (C:\Users\twyma\AppData\Local\npm-cache\_npx\ba4f1959e38407b5\node_modules\firebase-tools\lib\responseToError.js:49:12)
+    at RetryOperation._fn (C:\Users\twyma\AppData\Local\npm-cache\_npx\ba4f1959e38407b5\node_modules\firebase-tools\lib\apiv2.js:312:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[error] 
+[error] Error: Failed to create project because there is already a project with ID pokemon. Please try again with a unique project ID.
