@@ -1,0 +1,23 @@
+<form>
+    <mat-form-field>
+      <mat-label>Number of Players</mat-label>
+      <input matInput type="number" [(ngModel)]="numPlayers">
+    </mat-form-field>
+  
+    <mat-form-field>
+      <mat-label>Number of Matches</mat-label>
+      <input matInput type="number" [(ngModel)]="numMatches">
+    </mat-form-field>
+  
+    <mat-form-field>
+      <mat-label>Select Pokémon Card Set</mat-label>
+      <mat-select [(ngModel)]="selectedSet">
+        <mat-option *ngFor="let set of sets" [value]="set.code">
+          {{ set.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  
+    <button (click)="startGame()">Start Game</button>
+  </form>
+  
