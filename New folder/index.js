@@ -1,18 +1,26 @@
-const gridContainer = document.querySelector(".grid-container")
-let cards = [];
+const gridContainer = document.querySelector(".grid-container");
+let cards = [
+    { name: "Blastoise", img: "images4cards/Blastoise.png" },
+    { name: "Charizard", img: "images4cards/Charizard.png" },
+    { name: "Venusaur", img: "images4cards/Venusaur.png" },
+    { name: "Pikachu", img: "images4cards/Charmander.png" },
+    { name: "Blastoise", img: "images4cards/Charmeleon.png" },
+    { name: "Charizard", img: "images4cards/Wartortle.png" },
+    { name: "Venusaur", img: "images4cards/Ivysaur.png" },
+    { name: "Pikachu", img: "images4cards/pikachu.png" },
+    { name: "Blastoise", img: "images4cards/Bulbasaur.png" },
+    { name: "Charizard", img: "images4cards/Squirtle.png" },
+];
+
 let firstCard, secondCard;
 let lockBoard = false;
 let score = 0;
 
 document.querySelector(".score").textContent = score;
 
-fetch("./images4cards/Blastoise.png")
-.then((res) => res.json())
-.then((data) => {
-    cards = [...data, ...data];
-    shuffleCards();
+cards = [...cards, ...cards];
+   shuffleCards();
     generateCards();
-});
 
 function shuffleCards() {
     let currentIndex = cards.length,
@@ -28,21 +36,22 @@ function shuffleCards() {
 }
 
 function generateCards() {
+    gridContainer.innerHTML = ""
     for (let card of cards) {
         const cardElement = document.createElement("div");
         cardElement.classList.add("card");
         cardElement.setAttribute("data-name", card.name);
-        cardElement.innerHTML = '
-       <div class="front">
-            <img class="front-image" src="images4cards/pokeball.png" />
+        cardElement.innerHTML = `
+        <div class="front">
+            <img class="front-image" src="images4cards/pokeball.png" >
         </div>
         <div class="back"></div>
-        ' ;
+        `;
         gridContainer.appendChild(cardElement);
         cardElement.addEventListener("click", flipCard);
-
     }
 }
+
 function flipCard() {
     if (lockBoard) return;
     if (this === firstCard) return;
