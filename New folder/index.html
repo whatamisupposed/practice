@@ -3,17 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" type="test/css" href="index.css">
+    <title>Card Matching Game</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div class="grid-container">
-
+   
+    <div class="grid-container"></div>
+    <div class="scoreboard">
+        <p>Current Turn: <span id="current-player">Player 1</span></p>
+        <p>Score - Player 1: <span id="score1">0</span> | Player 2: <span id="score2">0</span> | Player 3: <span id="score3">0</span> | Player 4: <span id="score4">0</span></p>
     </div>
-    <p>Score: <span class="score"></span></p>
+    <div class="grid-container"></div>
     <div class="actions">
         <button onclick="restart()">Restart</button>
     </div>
     <script src="index.js"></script>
 </body>
+
 </html>

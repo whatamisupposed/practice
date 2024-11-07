@@ -3,60 +3,63 @@ let cards = [
     { name: "Blastoise", img: "images4cards/Blastoise.png" },
     { name: "Charizard", img: "images4cards/Charizard.png" },
     { name: "Venusaur", img: "images4cards/Venusaur.png" },
-    { name: "Pikachu", img: "images4cards/Charmander.png" },
-    { name: "Blastoise", img: "images4cards/Charmeleon.png" },
-    { name: "Charizard", img: "images4cards/Wartortle.png" },
-    { name: "Venusaur", img: "images4cards/Ivysaur.png" },
     { name: "Pikachu", img: "images4cards/pikachu.png" },
-    { name: "Blastoise", img: "images4cards/Bulbasaur.png" },
-    { name: "Charizard", img: "images4cards/Squirtle.png" },
+    { name: "Squirtle", img: "images4cards/Squirtle.png" },
+    { name: "Wartortle", img: "images4cards/Wartortle.png" },
+    { name: "Ivysaur", img: "images4cards/Ivysaur.png" },
+    { name: "Bulbasaur", img: "images4cards/Bulbasaur.png" },
+    { name: "Charmander", img: "images4cards/Charmander.png" },
+    { name: "Charmeleon", img: "images4cards/Charmeleon.png" },
 ];
 
 let firstCard, secondCard;
 let lockBoard = false;
-let score = 0;
+let currentPlayer = 1;
+let playerScores = [0, 0, 0, 0];
 
-document.querySelector(".score").textContent = score;
-
+// Duplicate cards for pairs and shuffle
 cards = [...cards, ...cards];
-   shuffleCards();
-    generateCards();
+shuffleCards();
+generateCards();
+updateScore();
+updatePlayerDisplay();
 
 function shuffleCards() {
-    let currentIndex = cards.length,
-    randomIndex,
-    temporaryValue;
+    let currentIndex = cards.length, randomIndex;
     while (currentIndex !== 0) {
-        randomIndex = Math.floor(math.random() * currentIndex);
-        currentIndex -= 1;
-        temporaryValue = cards[currentIndex];
-        cards[currentIndex] = cards[randomIndex];
-        cards[randomIndex] = temporaryValue;
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+        [cards[currentIndex], cards[randomIndex]] = [cards[randomIndex], cards[currentIndex]];
     }
 }
 
 function generateCards() {
-    gridContainer.innerHTML = ""
-    for (let card of cards) {
+    gridContainer.innerHTML = ""; // Clear container
+    cards.forEach(card => {
         const cardElement = document.createElement("div");
         cardElement.classList.add("card");
         cardElement.setAttribute("data-name", card.name);
+
         cardElement.innerHTML = `
-        <div class="front">
-            <img class="front-image" src="images4cards/pokeball.png" >
-        </div>
-        <div class="back"></div>
+            <div class="card-inner">
+                <div class="front">
+                    <img src="images4cards/pokeball.png" alt="Pokeball" />
+                </div>
+                <div class="back">
+                    <img src="${card.img}" alt="${card.name}" />
+                </div>
+            </div>
         `;
         gridContainer.appendChild(cardElement);
         cardElement.addEventListener("click", flipCard);
-    }
+    });
 }
 
 function flipCard() {
     if (lockBoard) return;
     if (this === firstCard) return;
 
-    this.classList.add("flipped")
+    this.classList.add("flipped");
 
     if (!firstCard) {
         firstCard = this;
@@ -64,45 +67,63 @@ function flipCard() {
     }
 
     secondCard = this;
-    score++;
-    document.querySelector(".score").textContent = score;
     lockBoard = true;
 
     checkForMatch();
 }
-function checkForMatch() {
-    let isMatch = firstCard.datasat.name === secondCard.dataset.name;
 
-    isMatch ? disableCards() : unflipCards();
+function checkForMatch() {
+    const isMatch = firstCard.dataset.name === secondCard.dataset.name;
+    if (isMatch) {
+        handleMatch();
+    } else {
+        handleMismatch();
+    }
 }
 
-function disableCards() {
+function handleMatch() {
     firstCard.removeEventListener("click", flipCard);
     secondCard.removeEventListener("click", flipCard);
-
+    playerScores[currentPlayer - 1]++;
+    updateScore();
     resetBoard();
+    // Player keeps their turn after a match
 }
 
-function unflipCards() {
+function handleMismatch() {
     setTimeout(() => {
         firstCard.classList.remove("flipped");
         secondCard.classList.remove("flipped");
+        updateTurn(); // Turn switches on a mismatch
         resetBoard();
-
     }, 1000);
 }
 
 function resetBoard() {
-firstCard = null;
-secondCard = null;
-lockboard = false;
+    [firstCard, secondCard, lockBoard] = [null, null, false];
+}
+
+function updateTurn() {
+    currentPlayer = currentPlayer % 4 + 1; // Rotate to the next player
+    updatePlayerDisplay();
+}
+
+function updateScore() {
+    document.getElementById("score1").textContent = playerScores[0];
+    document.getElementById("score2").textContent = playerScores[1];
+    document.getElementById("score3").textContent = playerScores[2];
+    document.getElementById("score4").textContent = playerScores[3];
+}
+
+function updatePlayerDisplay() {
+    document.getElementById("current-player").textContent = `Player ${currentPlayer}`;
 }
 
 function restart() {
-resetBoard();
-shuffleCards();
-score = 0;
-document.querySelector(".score>").textContent = score;
-gridContainer.innerHTML = "";
-generateCards();
+    playerScores = [0, 0, 0, 0];
+    currentPlayer = 1;
+    updateScore();
+    shuffleCards();
+    generateCards();
+    updatePlayerDisplay();
 }
