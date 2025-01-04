@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pokémon Login</title>
+    <!--Bootstrap 4 CDN-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" 
+    crossorigin="anonymous">
+    
+    <!--Fontawesome CDN-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" 
+    integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" 
+    crossorigin="anonymous">
+
+    <!--Custom styles-->
+    <link rel="stylesheet" href="login.css">
+    <style>
+        /* Pokémon Themed Styles */
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+        html, body {
+            background-image: url('https://wallpaperaccess.com/full/12345.jpg'); /* Replace with Pokémon-themed image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100%;
+            font-family: 'Press Start 2P', sans-serif;
+        }
+
+        .card {
+            height: 500px;
+            margin-top: auto;
+            margin-bottom: auto;
+            width: 400px;
+            background-color: rgba(0, 0, 0, 0.8) !important;
+            border: 2px solid #FFC312;
+            border-radius: 15px;
+        }
+
+        .card-header h3 {
+            color: #FFC312;
+            text-shadow: 2px 2px 5px #000;
+        }
+
+        .card-body {
+            color: white;
+        }
+
+        .input-group-prepend span {
+            background-color: #FFC312;
+            color: black;
+            border: 0 !important;
+        }
+
+        .login_btn {
+            color: black;
+            background-color: #FFC312;
+            width: 100%;
+        }
+
+        .login_btn:hover {
+            background-color: white;
+        }
+
+        .remember {
+            color: white;
+        }
+
+        .links a {
+            color: #FFC312;
+        }
+
+        .social_icon span {
+            font-size: 40px;
+            margin-left: 10px;
+            color: #FFC312;
+        }
+
+        .social_icon span:hover {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="d-flex justify-content-center h-100">
+        <div class="card">
+            <div class="card-header">
+                <h3>Pokémon Trainer Login</h3>
+                <div class="d-flex justify-content-end social_icon">
+                    <span><i class="fab fa-facebook-square"></i></span>
+                    <span><i class="fab fa-google-plus-square"></i></span>
+                    <span><i class="fab fa-twitter-square"></i></span>
+                </div>
+            </div>
+            <div class="card-body">
+                <form id="loginForm">
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Trainer Name" id="username" required>
+                    </div>
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-key"></i></span>
+                        </div>
+                        <input type="password" class="form-control" placeholder="Password" id="password" required>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn float-right login_btn">Login</button>
+                    </div>
+                </form>
+                <form id="signupForm">
+                    <div class="form-group">
+                        <button type="button" class="btn float-left login_btn" id="signupBtn">Sign Up</button>
+                    </div>
+                </form>
+            </div>
+            <div class="card-footer">
+                <div class="d-flex justify-content-center links">
+                    Don’t have an account? <a href="#" id="signupLink">Sign Up</a>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <a href="#">Forgot your password?</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    // Local Storage for storing user accounts
+    const storedUsers = JSON.parse(localStorage.getItem("users")) || {};
+
+    document.getElementById("loginForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const username = document.getElementById("username").value.toLowerCase();
+        const password = document.getElementById("password").value;
+
+        if (storedUsers[username] && storedUsers[username] === password) {
+            alert("Welcome, Trainer " + username.charAt(0).toUpperCase() + username.slice(1) + "!");
+            window.location.href = "index.html"; // Redirect to index.html
+        } else {
+            alert("Invalid username or password. Please try again.");
+        }
+    });
+
+    document.getElementById("signupForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const username = document.getElementById("username").value.toLowerCase();
+        const password = document.getElementById("password").value;
+
+        if (storedUsers[username]) {
+            alert("Username already exists. Please choose a different username.");
+        } else {
+            storedUsers[username] = password;
+            localStorage.setItem("users", JSON.stringify(storedUsers));
+            alert("Account created successfully! You can now log in.");
+        }
+    });
+
+    document.getElementById("signupBtn").addEventListener("click", function () {
+        alert("To sign up, enter your Trainer Name and Password, then click this button.");
+    });
+</script>
+</body>
+</html>
