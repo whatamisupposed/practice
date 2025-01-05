@@ -1,0 +1,2 @@
+I tried at first a different project. Didn't work
+Went to pokemon. Dowloaded all the pictures I needed dowloaded the bakcground. i had issues with the size of the pokemon. I fixed that with messing with flexboxes etc. i had troubles with the size of the cards themselves and so on. I had trouble implementing a turn system with some messing around that worked eventually. 

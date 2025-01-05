@@ -10,6 +10,16 @@ let cards = [
     { name: "Bulbasaur", img: "images4cards/Bulbasaur.png" },
     { name: "Charmander", img: "images4cards/Charmander.png" },
     { name: "Charmeleon", img: "images4cards/Charmeleon.png" },
+    { name: "Bayleef", img: "images4cards/Bayleef.png" },
+    { name: "Chikorita", img: "images4cards/Chikorita.png" },
+    { name: "Croconaw", img: "images4cards/Croconaw.png" },
+    { name: "Feraligator", img: "images4cards/Feral.png" },
+    { name: "Mega", img: "images4cards/Mega.png" },
+    { name: "Pichu", img: "images4cards/Pichu.png" },
+    { name: "Quilava", img: "images4cards/Quilava.png" },
+    { name: "Raichu", img: "images4cards/Raichu.png" },
+    { name: "Totodile", img: "images4cards/totodile.png" },
+    { name: "Typhlosion", img: "images4cards/typh.png" },
 ];
 
 let firstCard, secondCard;
